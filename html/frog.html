@@ -1,0 +1,286 @@
+<!--
+Jacob Haslam
+IS 201 Section 2
+11/24/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/layoutstyles.css">
+</head>
+<body class="bigger">
+    <div class="header common">
+        <span class="subhead">
+            <a href="../Index.html" id="top">Home</a> | 
+            <a href="../html/Resume.html">Resume</a> |
+            <a href="frog.html">Frog</a>
+        </span>   
+    </div>    <div class="mainbody common">
+        <p class="justify"> 
+            <span class="bold">Types of Frogs</span> <br><br>
+            <span id="psn" class="boldheadings">Poison Frogs</span>
+                <ul>
+                    <li>Golden Poison Dart Frog (Phyllobates terribilis)
+                        <ul>
+                            <li>
+                                Found in Colombia, it is one of the most toxic animals on Earth. Its skin secretes a potent toxin called batrachotoxin that can cause paralysis and death in predators.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Blue Poison Dart Frog (Dendrobates tinctorius “azureus”)
+                            <ul>
+                                <li>Native to the forests of Suriname, this species is famous for its vibrant blue coloration with black spots. Its toxins can cause severe irritation or even harm to predators.</li>
+                            </ul>
+                    </li>
+                    <li> Strawberry Poison Dart Frog (Oophaga pumilio)
+                        <ul>
+                            <li>Found in Central America, this frog comes in various color morphs. While less toxic than the golden poison dart frog, it still produces alkaloid toxins that deter predators.</li>
+                        </ul>
+                    </li>
+                </ul>
+            <span id="non" class="boldheadings" class="padding">Non-Poison Frogs</span>
+                <ul>
+                    <li>American Bullfrog (Lithobates catesbeianus)
+                        <ul>
+                            <li>
+                                Found in North America, this large frog is non-toxic and often recognized by its deep, resonating croaks. It is commonly seen near ponds and lakes.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Green Tree Frog (Dryophytes cinereus)
+                        <ul>
+                            <li>
+                                Native to the southeastern United States, this small, bright green frog is harmless and often found clinging to trees or leaves in humid environments.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>White’s Tree Frog (Ranoidea caerulea)
+                        <ul>
+                            <li>
+                                Also known as the Australian green tree frog, this species is non-toxic, docile, and popular in the pet trade due to its charming appearance and ease of care.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+        </p>
+
+        <ol>
+           Some of my Favorites!
+                <ul>
+                    <li>Poison Dart Frog</li>
+                    <li>Goliath Frog</li>
+                    <li>Red-Eyed Tree Frog</li>
+                    <li>Amazon Milk Frog</li>
+                    <li>Glass Frog</li>
+                    <li>Purple Frog</li>
+                    <li>Australian Green Tree Frog</li>
+                    <li>Wood Frog</li>
+                    <ul>
+
+                    </ul>
+                    <p>&nbsp;</p>
+                    <span class="bbg">
+                        <img src="../images/bomb.webp" height="200" alt="blue frog">
+                        <img src="../images/jit.jpg" height="200" alt="green">
+                    </span> 
+                    <span class="yank">
+                    </span>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="bald">
+                        <h1>Typing Speed Game</h1>
+                        <p>Type the word shown below as quickly as possible!</p>
+                    
+                        <div class="typing-game">
+                            <p id="wordToType" class="word-display"></p>
+                            <input type="text" id="typedWord" class="typing-input" placeholder="Type here..." />
+                            <p id="gameResult" class="game-result"></p>
+                        </div>
+                    
+                        <script>
+                            const words = ["frog", "amphibian", "jump", "green", "pond", "swamp", "nature", "rain", "forest", "leap"];
+                            const wordToType = document.getElementById("wordToType");
+                            const typedWord = document.getElementById("typedWord");
+                            const gameResult = document.getElementById("gameResult");
+                    
+                            let startTime, endTime;
+                    
+                            // Function to start the game
+                            function startGame() {
+                                gameResult.textContent = "";
+                                typedWord.value = "";
+                                typedWord.disabled = false;
+                    
+                                // Display a random word
+                                const randomWord = words[Math.floor(Math.random() * words.length)];
+                                wordToType.textContent = randomWord;
+                    
+                                // Record the start time
+                                startTime = new Date().getTime();
+                    
+                                // Focus the input field
+                                typedWord.focus();
+                            }
+                    
+                            // Event listener for input
+                            typedWord.addEventListener("input", () => {
+                                if (typedWord.value === wordToType.textContent) {
+                                    // Record the end time
+                                    endTime = new Date().getTime();
+                    
+                                    // Calculate the reaction time
+                                    const timeTaken = endTime - startTime;
+                    
+                                    // Display the result
+                                    gameResult.textContent = `Great job! You took ${timeTaken}ms.`;
+                                    gameResult.style.color = "#2ecc71"; // Green for success
+                    
+                                    // Disable the input field and reset the game
+                                    typedWord.disabled = true;
+                                    setTimeout(startGame, 2000); // Restart game after 2 seconds
+                                }
+                            });
+                    
+                            // Initialize the game
+                            startGame();
+                        </script>
+                    
+                        <style>
+                            .typing-game {
+                                text-align: center;
+                                margin-top: 20px;
+                            }
+                    
+                            .word-display {
+                                font-size: 28px;
+                                font-weight: bold;
+                                color: #3498db; /* Blue word */
+                                margin-bottom: 15px;
+                            }
+                    
+                            .typing-input {
+                                font-size: 18px;
+                                padding: 10px;
+                                border: 2px solid #ccc;
+                                border-radius: 5px;
+                                width: 300px;
+                                text-align: center;
+                            }
+                    
+                            .typing-input:focus {
+                                border-color: #3498db; /* Highlight border when focused */
+                                outline: none;
+                            }
+                    
+                            .game-result {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-top: 15px;
+                            }
+                        </style>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <div class="tableu" class='tableauPlaceholder' id='viz1732584409096' style='position: relative'><noscript><a href='#'><img alt='Frog Population ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableuGettingStarted&#47;SalesOverTime&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TableuGettingStarted&#47;SalesOverTime' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;TableuGettingStarted&#47;SalesOverTime&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1732584409096');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                    <p>&nbsp;</p>
+                    
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <a href="#Top">Back to Top</a>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </ul>
+            
+
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div class="leftmenu common">
+        <a href="#psn">Poison Frogs</a><br>
+        <a href="#non">Non-Poison Frogs</a><br>
+        <a href="#fav">Favorites</a>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>
+            Geographical density chart of frogs across the globe.
+        </p>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+                <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>
+            Here is the tableu chart you asked for! This represents frog population over the past 7 years.
+        </p>
+    </div>
+
+    <div class="rightmenu common">
+        <h1>Jake's Story</h1>
+        <p>
+            Drizzy's love for frogs began while childhood summers exploring wetlands near his papa's home. Captivated by their vibrant colors and evening croaks, a close encounter with a tiny tree frog sparked his curiosity. This fascination grew into a passion for studying amphibians and their unique role in nature.
+    
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <p>
+            Here is Jake's favorite video of frogs.
+        </p>
+
+
+        <iframe class="video" src="https://www.youtube.com/watch?v=k85mRPqvMbE" frameborder="0" allowfullscreen width="500px" height="300px"></iframe>
+    </div>
+    <div>
+        <img src="../images/frogmap.jpg" alt="frogmap" class="edit"> 
+
+        
+    </div>
+
+
+
+</body>
+</html>

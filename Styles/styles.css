@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;   
+    color: rgb(56, 56, 56);
+}
+h1 {
+    font-size: 19px;
+    font-style: initial;
+}
+
+li {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+a {color: rgb(79, 79, 255);
+text-decoration: none;
+}
+
+a:hover {text-decoration: underline;
+font-weight: bold;
+}
+
+a:visited {color: rgb(86, 115, 149);}
+
+.boldheadings {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.underline {text-decoration: underline;}
+.bold {font-weight: bold;}
+.justify {
+    padding-left: 5px;
+    text-align: left;
+}
+
+
+.box1 {
+    border-width: 1px;
+    border-style: solid;
+    color: aliceblue;
+}
+
+.padding {padding: 5px;}
+
+
+.margin {margin: 30px;}
+
+
+.bbg {
+    float: right;
+    margin-top: -200px;
+    margin-right: 200px;
+}
+
+
+.edit {
+    height: 300px;
+    margin-left: 140px;
+    margin-bottom: -1000px;
+}
+
+
+.subhead {
+    padding: 5px;
+    padding-top: 5px;
+}
+
+
+.video {
+    margin-left: -600px;
+    margin-top: -150px;
+}
+
+.nig {float: top;}
+
+.tableu {
+    margin-right: 100px;
+}
+
+.bigger{
+    background-image: url('../images/il_fullxfull.4631709551_9mzc.avif');
+}
+
+
+.bald {
+    margin-top: 200px;
+    margin-left: 600px;
+}
